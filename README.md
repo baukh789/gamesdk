@@ -31,6 +31,21 @@ gamebridge.js加载成功后，在适当的地方执行showAd或type所对应的
         window.gamebridge.showAd(type); // or window.gamebridge.showStart();
     }
 ```
+#### Game Config
+> 通过window.GAME_BRIDGE_CONFIG，可向SDK传递游戏中的方法，如: 游戏暂停，游戏恢复。
+```
+window.GAME_BRIDGE_CONFIG = {
+	// 游戏暂停方法
+	pause: (breakType: 广告类型) => {
+		// 游戏的暂停方法
+	}, 
+	
+	// 游戏恢复方法
+	resume: (breakType: 广告类型) => {
+		// 游戏的暂停方法
+	}
+}
+```
 #### Type options
 - pause: 前贴片广告
 - start: 游戏开始前广告
